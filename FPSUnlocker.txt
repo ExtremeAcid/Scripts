@@ -1,0 +1,31 @@
+
+
+-- HUGE CREDIT TO MY FRIEND @SYNAPSIUM!!
+// FPS UNLOCKER
+	if (fpsunlockvar)
+	{
+		everything();
+		DWORD fps = 0;
+		ReadProcessMemory(handle, (LPCVOID)((DWORD)samp + 0x9D9D0), &fps, sizeof(fps), 0);
+
+		if (fps != 1347550997)
+		{
+			DWORD pFps = 1347550997;
+			WriteProcessMemory(handle, (LPVOID)((DWORD)samp + 0x9D9D0), &pFps, sizeof(pFps), 0);
+
+		}
+	}
+	//FPS UNLOCKER STOP
+	if (!fpsunlockvar)
+	{
+		everything();
+		DWORD fps = 1;
+		ReadProcessMemory(handle, (LPCVOID)((DWORD)samp + 0x9D9D0), &fps, sizeof(fps), 0);
+
+		if (fps == 1347550997)
+		{
+			DWORD pFps = 1347550997;
+			WriteProcessMemory(handle, (LPVOID)((DWORD)samp + 0x9D9D0), &pFps, sizeof(pFps), 0);
+
+		}
+	}

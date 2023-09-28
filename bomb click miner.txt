@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AdminEvilDRagon/bomb-click-mine/main/bomb%20click%20mine", true))()
